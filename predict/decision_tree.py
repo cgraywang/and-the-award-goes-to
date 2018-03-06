@@ -46,4 +46,5 @@ if __name__ == '__main__':
     util.print_predictions_for(guesses, "Decision Trees - Predictions for {0}:".format(args.award))
     
     # Declare the highest percentage the winner.
-    print "\nAnd the award goes to... {0} !!!".format(max(guesses, key=guesses.get))
+    print("\nAnd the award goes to")
+    print(max(guesses, key=guesses.get))

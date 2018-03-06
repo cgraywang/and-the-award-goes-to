@@ -46,11 +46,11 @@ def accuracy(Y_predict, Y_test):
 def print_predictions_for(guesses, title):
     total = sum([v for k, v in guesses.items()])
 
-    print
-    print title
-    print "--------------------------------------------------" 
+    print()
+    print(title)
+    print("--------------------------------------------------") 
     for key, value in sorted(guesses.items(), key=lambda x: x[1], reverse=True):
-        print round(value / total, 4), "\t", key
+        print(round(value / total, 4), "\t", key)
 
 
 def test_for_accuracy(data, classifier, iterations = 200):
