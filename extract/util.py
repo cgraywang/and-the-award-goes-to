@@ -40,7 +40,7 @@ def write_to_csv(filename, results, isList = True):
 
 def retrieve_clean_response(href):
     raw_html = requests.get(href)
-    raw_html = re.sub(r'\[[0-9A-Z]+\]', '', raw_html.content) # removes footnotes
+    raw_html = re.sub(r'\[[0-9A-Z]+\]', '', raw_html.text) # removes footnotes
     dom_tree = BeautifulSoup(raw_html, "lxml")
     # why do we do this?
     for tag in dom_tree.find_all('sup'):

@@ -13,6 +13,8 @@ if __name__ == '__main__':
         reader = csv.DictReader(inputs)
 
         for row in reader:
+            print("row:")
+            print(row)
             util.write_to_csv('../data/nominations.csv', noms.extract(row, min_year = 1960, max_year = 2016))
 
     print("Nominations extracted.")
@@ -28,7 +30,7 @@ if __name__ == '__main__':
             if row['film'] in visited:
                 continue
 
-            print row['year']
+            print(row['year'])
 
             try:
                 util.write_to_csv('../data/films.csv', films.extract(row), isList = False)
